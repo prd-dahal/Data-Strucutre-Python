@@ -1,11 +1,12 @@
 def eliminate_repeated_char(x):
     output = []
+    repeated = []
     for letter in x:
-        
-        if(letter not in output):
+
+        if(letter not in output and letter not in repeated):
             output.append(letter)
         elif(letter in output):
-            output.pop(output.index(letter))
+            repeated.append(output.pop(output.index(letter)))
     return output
 
 
